@@ -40,6 +40,15 @@ public class AddressController {
 		return response.get();
 	}
 	
+	//GET request for fetching a Address by pincode
+	@GetMapping("/pincode/{pincode}")
+	public Address getAddressByPincode(@PathVariable("pincode") int pincode) throws Exception {
+		Address response = addRepo.findAddressByPincode(pincode);
+		if(response==null)
+			throw new Exception("Address not found");
+		return response;
+	}
+	
 	
 	//POST requests
 	

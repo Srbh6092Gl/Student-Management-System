@@ -6,6 +6,6 @@ import com.globallogic.sms.entity.Address;
 
 public interface AddressRepository extends JpaRepository<Address, Integer>{
 
-//	public Address findAddressByPincode(int pin);
+	public Address findAddressByPincode(int pin);
 	
 }
